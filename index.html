@@ -198,18 +198,18 @@
 <body>
     <div class="container">
         <h1>📊 Chat Analysis Tool</h1>
-        <p class="subtitle">Upload your chat CSV and select the bot platform</p>
+        <p class="subtitle">Upload your chat CSV and select the bot</p>
 
         <form id="uploadForm">
             <div class="form-group">
-                <label for="botType">Select Bot Platform</label>
+                <label for="botType">Select Bot</label>
                 <select id="botType" name="bot_id" required>
-                    <option value="">-- Choose a platform --</option>
-                    <option value="telegram">Telegram Bot</option>
-                    <option value="whatsapp">WhatsApp Bot</option>
-                    <option value="slack">Slack Bot</option>
-                    <option value="discord">Discord Bot</option>
-                    <option value="messenger">Facebook Messenger</option>
+                    <option value="">-- Choose a bot --</option>
+                    <option value="billy">Billy</option>
+                    <option value="toby">Toby</option>
+                    <option value="flexi">Flexi</option>
+                    <option value="molly">Molly</option>
+                    <option value="sally">Sally</option>
                 </select>
             </div>
 
@@ -299,7 +299,7 @@
                 const url = window.URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = `${botType}_analysis_${Date.now()}.csv`;
+                a.download = `${botType}_analysis_${Date.now()}.xlsx`;
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
